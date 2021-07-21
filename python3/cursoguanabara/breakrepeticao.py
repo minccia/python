@@ -64,38 +64,59 @@
 #        break
 
 # Variáveis e listas para o loop while
-idade = homens = maiores_que_18 = mulheres_menores_que_20 = 0
+#idade = homens = maiores_que_18 = mulheres_menores_que_20 = 0
 
-while True:
+#while True:
     # Lê a idade e o sexo da pessoa
-    idade = int(input('Qual é a idade da pessoa? '))
-    sexo = str(input('Qual é o sexo da pessoa? [Masculino/Feminino] ')).strip().capitalize()[0]
+#    idade = int(input('Qual é a idade da pessoa? '))
+#    sexo = str(input('Qual é o sexo da pessoa? [Masculino/Feminino] ')).strip().capitalize()[0]
    
    # Contadores de pessoas maiores de 18 anos,
    # Número de maiores de homens e número de mulheres menos que 20 anos.
-    if sexo not in 'MasculinoFeminino':
-        print('Inválido, por favor tente novamente.')
-        break
+#    if sexo not in 'MasculinoFeminino':
+#        print('Inválido, por favor tente novamente.')
+#        break
 
-    if idade > 18:
-        maiores_que_18 += 1
+#    if idade > 18:
+#        maiores_que_18 += 1
 
-    if sexo == 'M':
-        homens += 1
+#    if sexo == 'M':
+#        homens += 1
     
-    if sexo == 'F' and idade < 20:
-        mulheres_menores_que_20 += 1
+#    if sexo == 'F' and idade < 20:
+#        mulheres_menores_que_20 += 1
     
     # Pergunta se o usuário deseja continuar cadastrando pessoas no sistema
-    prosseguir = str(input('Você deseja continuar? [S/N] ')).strip().upper()[0]
+#    prosseguir = str(input('Você deseja continuar? [S/N] ')).strip().upper()[0]
 
-    if prosseguir in 'S':
-        print('Ok')
+#    if prosseguir in 'S':
+#        print('Ok')
 
-    else:
-        break
+#    else:
+#        break
 
 # Mostra os resultados
-print(f"""O número de pessoas que possui mais de 18 anos é: {maiores_que_18}
-O número de homens é: {homens}
-E o número de mulheres com menos de 20 anos é: {mulheres_menores_que_20}""")
+#print(
+#        f"""O número de pessoas que possui mais de 18 anos é: {maiores_que_18}
+#O número de homens é: {homens}
+#E o número de mulheres com menos de 20 anos é: {mulheres_menores_que_20}"""
+#)
+
+# Teste de lista P.A
+proximo_termo = razao = 0
+
+primeiro_termo = int(input('Qual é o primeiro termo? '))
+razao = int(input('Qual é a razão? '))
+
+progressao_aritmetica = [ primeiro_termo ]  
+
+while True:
+    proximo_termo = primeiro_termo + razao
+    primeiro_termo = proximo_termo
+
+    if len(progressao_aritmetica) == 10:
+        break
+
+    progressao_aritmetica.append(proximo_termo)
+print(f'Os dez primeiros termos da P.A são: \n {progressao_aritmetica}')
+
