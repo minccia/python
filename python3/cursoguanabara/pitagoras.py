@@ -1,8 +1,10 @@
-# Pitágoras
+cateto_adjacente = int(input('Qual é o valor do cateto adjacente? '))
+cateto_oposto = int(input('Qual é o valor do cateto oposto? '))
 
-ca = (int(input("Qual o valor do cateto adjacente?")))**2 # Variável que define o cateto adjacente
-co = (int(input("Qual o valor do cateto oposto?")))**2 # Variável que define o cateto oposto
-hip = (ca + co)**(1/2) # Definição da hipotenusa
+def Pitagoras(cateto_adjacente, cateto_oposto):
+    hipotenusa = ((cateto_adjacente**2) + (cateto_oposto**2))**(1/2)
+    return hipotenusa
 
-print(hip)
+print(Pitagoras(cateto_adjacente, cateto_oposto))
+
 
